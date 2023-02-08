@@ -2,7 +2,7 @@
 	<div class="sidebar-left-info">
 	    <div class="user-box">
 	        <div class="d-flex justify-content-center">
-	            <img th:src="@{${#authentication.getPrincipal().getUser().getUserDetails.getAvatar()}}" alt="" class="img-fluid rounded-circle"> 
+	            <img th:src="@{${#authentication.getPrincipal().getUser().getUserDetail.getAvatar()}}" alt="" class="img-fluid rounded-circle"> 
 	        </div>
 	        <div class="text-center text-white mt-2">
 	            <h6 th:text="${#authentication.getPrincipal().getFullName()}"></h6>
@@ -12,23 +12,24 @@
 	
 	    <!--sidebar nav start-->
 	    <ul class="side-navigation">
-	        <li>
-	            <h3 class="navigation-title">Navigation</h3>
+	    	<li>
+	            <a href="#"><i class="ti-pencil"></i><span>Compoese</span></a>
 	        </li>
+	        <hr>
 	        <li class="active">
-	            <a th:href="@{/}"><i class="mdi mdi-google-drive"></i> <span>My Drive</span></a>
+	            <a th:href="@{/}"><i class="mdi mdi-message-outline"></i> <span>Inbox</span></a>
 	        </li>
 	        <li>
-	            <a href="#"><i class="mdi mdi-share"></i> <span>Share with me</span></a>
+	            <a href="#"><i class="ti-star"></i> <span>Starred</span></a>
 	        </li>
 	        <li>
-	            <a href="#"><i class="mdi mdi-clock"></i> <span>Recent</span></a>
+	            <a href="#"><i class="ti-file mr-2"></i> <span>Draft</span></a>
 	        </li>
 	        <li>
-	            <a href="#"><i class="mdi mdi-star"></i> <span>Starred</span></a>
+	            <a href="#"><i class="ti-location-arrow"></i> <span>Sent</span></a>
 	        </li>
 	        <li>
-	            <a href="#"><i class="mdi mdi-delete"></i> <span>Trash</span></a>
+	            <a href="#"><i class="ti-trash"></i> <span>Trash</span></a>
 	        </li>
 	    </ul><!--sidebar nav end-->
 	</div>
